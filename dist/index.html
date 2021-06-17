@@ -101,7 +101,8 @@
             left: 47%;
             margin-left: -100px;
             z-index: 6;
-        }
+            }
+            
         .ear::before{
             position: absolute;
             content: ''; 
@@ -243,6 +244,21 @@
             top:264px ;
             left:311px ;
             z-index: 5;
+        }
+        @keyframes wave{
+                0%{
+                    transform:translateY(-25px) ;
+                }
+                75%{
+                    transform:translateY(5px) ;
+                }
+              
+                100%{
+                    transform:translateY(0) ;
+                }
+            }
+        .eyebrow:hover{
+            animation:wave 100ms infinite ease;
         }
         .eyebrow + .eyebrow{
             transform: scaleX(-1)rotate(-4deg);
