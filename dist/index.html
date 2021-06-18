@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>卡通人物</title>
-    <style>
+    <style>   
         *{
             margin: 0;padding: 0;box-sizing: border-box;
         }
@@ -26,18 +26,21 @@
             --cap-dark:#258;
             --cap-lid:#666;
             --skin-dark:#fb9;
-           
             position: relative;
-            
             width: 800px;;
             height: 800px;;
-            background: #58b8;
-            
+            background: #58b8;   
+        }
+        @media (max-width: 400px) {
+            .cartoon{ 
+            width: 300px;
+            height: 300px;
+        }
         }
         .eyes{ 
             position: absolute;
-            width: 200px;;
-            height: 200px;;
+            width: 200px;
+            height: 200px;
             top: 308px;
             left: 50%;
             transform: translate(-50%,-50%);
@@ -51,6 +54,14 @@
                 background-size: 58% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
                 background-repeat: no-repeat;
                 z-index: 5;
+        }
+        @media (max-width: 400px) {
+            .eyes{  
+            width: 75px;
+            height: 75px;
+            top: 108px;
+            left: 50%;
+        }
         }
         .face{
             position: absolute;
@@ -70,12 +81,18 @@
             margin-left: -100px;
             z-index: 4;
         } 
+        @media (max-width: 400px) {
+            .face{
+            width: 67px;
+            height: 75px;
+            top: 82px;
+            left: 80%;
+        } 
+        }
         .nose{
-           
            position: absolute;
            width: 46px ; 
            height: 33px;
-
            background: var(--skin);
            background-image: linear-gradient(to right,transparent,var(--skin-dark));
            border: 0.66vmin solid;
@@ -88,8 +105,14 @@
            margin-left: -100px;
            z-index: 6;
         }
+        @media (max-width: 400px) {
+            .nose{
+           width: 17px ; 
+           height: 13px;
+           top: 112px;
+           left: 85%;
+        }}
         .ear{
-            
             position: absolute;
             width: 60px;
             height: 83px;
@@ -103,7 +126,13 @@
             margin-left: -100px;
             z-index: 6;
             }
-            
+            @media (max-width: 400px) {
+                .ear{
+            width: 23px;
+            height: 31px;
+            top: 102px;
+            left: 69%;
+            }}       
         .ear::before{
             position: absolute;
             content: ''; 
@@ -119,6 +148,13 @@
             box-shadow: inset -1.5vmin 2vmin 0 -0.5vmin var(--skin-dark);
             z-index:5; 
         }
+        @media (max-width: 400px) {
+            .ear::before{
+            width: 13px;
+            height: 18px;         
+            top: 5px;
+            left: 102px;
+        }}
         .ear::after{
             position: absolute;
             content: ''; 
@@ -134,7 +170,13 @@
             transform: rotate(30deg);
             box-shadow: -1vmin -0.25vmin 0 0.5vmin var(--skin-dark);
             z-index:5; 
-        }
+        }@media (max-width: 400px) {
+            .ear::after{
+            width: 5.5px;
+            height: 7.5px;         
+            top: 17px;
+            left: 108px;
+        }}
         .ear.ear-back{
             display: flex;
             border-left: 0.75vmin solid;
@@ -143,6 +185,10 @@
             background-image: linear-gradient(to right,transparent,var(--skin-dark)20%);
             z-index: 1; 
         }
+        @media (max-width: 400px) {
+            .ear.ear-back{
+            left: 257px;
+        }}
         .neck{
             position: absolute;
             width: 94px;
@@ -156,7 +202,13 @@
             margin-left: -100px;
             background-image: radial-gradient(circle at 83% 25%,var(--skin-dark) 53%,transparent 0);
             z-index: 3; 
-        }
+        }@media (max-width: 400px) {
+            .neck{
+            width: 39px;
+            height: 31px;
+            top: 136px;
+            left: 76%;
+        }}
         .forehead{
             position: absolute;
             width: 200px;
@@ -169,7 +221,13 @@
             left: 58%;
             margin-left: -100px;
             z-index:2; 
-        }
+        }@media (max-width: 400px) {
+            .forehead{
+            width: 75px;
+            height: 68px;
+            top: 66px;
+            left: 80%;
+        }}
         .mouth{
             position: absolute;
             width: 93px;
@@ -184,6 +242,13 @@
             transform: rotate(10deg);
             z-index:5; 
         } 
+        @media (max-width: 400px) {
+            .mouth{
+            width: 35px;
+            height: 13px;
+            top: 129px;
+            left: 77%;
+        } }
         .mouth::after{ 
             position: absolute;
             content: ''; 
@@ -198,6 +263,13 @@
             transform: rotate(15deg);
             z-index:5; 
         }
+        @media (max-width: 400px) {  
+        .mouth::after{ 
+            width: 13px;
+            height: 9px;         
+            top: 2px;
+            left: 100px;
+        }}
         .cap{
             position: absolute;
             width:308px ;
@@ -212,6 +284,13 @@
             border-bottom: 0.125vmin solid transparent;
             z-index:6; 
         } 
+        @media (max-width: 400px) { 
+            .cap{
+            width:115px ;
+            height:26px ;
+            top:79px ;
+            left:92px ;
+        } }
         .cap-lid{
             background: var(--cap-lid);
             background-image: linear-gradient(45deg,transparent 0%,var(--cap-lid));
@@ -219,6 +298,7 @@
             border-bottom: 0.5vmin solid;
             z-index: 1;
         }
+ 
         .cap-top{
             position: absolute;
             width:195px ;
@@ -235,6 +315,13 @@
             linear-gradient(-10deg,transparent 22%,var(--cap-dark) 0);
             z-index:6; 
         }
+        @media (max-width: 400px) {
+            .cap-top{
+            width:68px ;
+            height:39px ;
+            top:52px ;
+            left:92px ;
+        }}
         .eyebrow{
             position: absolute;
             width:95px ;
@@ -246,6 +333,16 @@
             left:311px ;
             z-index: 5;
         }
+        @media (max-width: 400px) {
+            .eyebrow{
+            
+            width:35px ;
+            height:35px ;
+
+            top:92px ;
+            left:122px ;
+          
+        }}
         @keyframes wave{
                 0%{
                     transform:translateY(-25px) ;
@@ -268,6 +365,15 @@
             height: 73px;
             width: 83px;
         }
+        @media (max-width: 400px) {
+            .eyebrow + .eyebrow{
+           
+            left: 150px;
+            top: 89px;
+            height: 35px;
+            width: 34px;
+        }
+    }
     </style>
 </head>
 
